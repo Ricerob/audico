@@ -39,3 +39,8 @@ venv.bak/
 
 *.zip
 .DS_Store
+
+# Local testing
+testing.py
+data/*
+data

@@ -21,13 +21,13 @@ class Clip:
         Clip instance. Represents one audio file.
     '''
 
-    def __init__(self, path: str, label: list = None, skip_preprocessing: bool = False):
+    def __init__(self, path: str, label: str, skip_preprocessing: bool = False):
         self.path = path                                # String representation of path
         self.state = 'unprocessed'                      # For future multithreading applications.
         self.sr = 0                                     # Sample rate of clip.
         self.duration = 0.0                             # Float of duration for clip.
         self.spectrogram = None                         # Spectrogram representation of clip. Optional.
-        self.labels = labels                            # Included labels for this clip.
+        self.label = label                              # Included labels for this clip.
         self.skip_preprocessing = skip_preprocessing    # Optionally skip preprocessing used for ML applications.
 
         if not os.path.exists(path):
